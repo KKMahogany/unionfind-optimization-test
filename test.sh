@@ -2,17 +2,22 @@
 
 make
 
-queries=$((5*10**6))
+queries=$((1*10**5))
 seed=312876
 
 echo "Path compression ONLY"
-time ./uf1 $queries $queries $seed
+time ./path-compression $queries $queries $seed
 echo
 
 echo "Union by rank ONLY"
-time ./uf2 $queries $queries $seed
+time ./union-by-rank $queries $queries $seed
 echo
 
+# This is really slow
+#echo "Union randomly"
+#time ./union-by-random $queries $queries $seed
+#echo
+
 echo "Path compression WITH union by (approximate) rank"
-time ./uf3 $queries $queries $seed
+time ./both $queries $queries $seed
 echo

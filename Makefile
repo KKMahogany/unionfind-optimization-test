@@ -1,13 +1,16 @@
-all: uf1 uf2 uf3
+all: path-compression union-by-rank union-by-random both
 
-uf1: uf1.cpp
-	g++ main.cpp uf1.cpp -O2 -std=c++11 -o $@
+path-compression: path-compression.cpp
+	g++ main.cpp path-compression.cpp -O2 -std=c++11 -o $@
 
-uf2: uf2.cpp
-	g++ main.cpp uf2.cpp -O2 -std=c++11 -o $@
+union-by-rank: union-by-rank.cpp
+	g++ main.cpp union-by-rank.cpp -O2 -std=c++11 -o $@
 
-uf3: uf3.cpp
-	g++ main.cpp uf3.cpp -O2 -std=c++11 -o $@
+union-by-random: union-by-random.cpp
+	g++ main.cpp union-by-random.cpp -O2 -std=c++11 -o $@
+
+both: both.cpp
+	g++ main.cpp both.cpp -O2 -std=c++11 -o $@
 
 clean:
-	rm uf1 uf2 uf3
+	rm path-compression union-by-rank union-by-random both

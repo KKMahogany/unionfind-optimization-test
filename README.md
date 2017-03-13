@@ -5,7 +5,8 @@ Some basic code to compare the path compression and union by rank optimizations 
 Currently the code is only tested on entirely random join operations.
 
 On my XPS 13 9360 (Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz (4 CPUs), ~2.9GHz), test.sh outputs:
-```Path compression ONLY
+```
+Path compression ONLY
 
 real    0m1.308s
 user    0m1.234s
